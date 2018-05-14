@@ -1,0 +1,81 @@
+	html{
+		margin: auto auto;
+		text-align: center;
+		color: white;
+		background-color: black;
+	}
+	.intro{
+
+		margin : 18% 0;
+	}
+
+	.teams , .teams td {
+		border: 1px solid white;
+		margin: auto auto;
+	}
+
+
+	.tijdschema , .tijdschema td {
+		border: 1px solid white;
+		margin: auto auto;
+	}
+
+	ul  {
+		list-style: none;
+	}
+
+	a{
+		color: red;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#c1{
+		display: inline-flex;
+		margin : 0 0;
+	}
+	#c2{
+		display: flex;
+		justify-content: center;
+		margin: 30px 0px;
+	}
+	#c3{
+		display: flex;
+		justify-content:center;
+		margin : 20px 0;
+	}
+	#winner{
+		display: flex;
+		justify-content:center;
+		margin : 20px 0;
+	}
+	.teams_part{
+		border: 1px solid black;
+		padding: 0px 0;
+		display: inline-flex;
+		margin: 16px 45px;
+	}
+	#c1 .teams_part h4{
+		margin: 5px 26px;
+	}
+	#c2 .teams_part h4{
+		margin: 5px 28px;
+	}
+	#c3 .teams_part h4{
+		margin: 5px 28px;
+	}
+	#winner .teams_part h4{
+		margin: 5px 28px;
+	}
+
