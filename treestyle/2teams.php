@@ -1,10 +1,20 @@
-<head><link rel="stylesheet" href="../style/main.css">
-</head>
-<div  id="c3">
-
-	<?php 
-
+ <?php 
+	error_reporting(0);
+	echo '<div  id="c3">';
 	require("../treestyle/getteams.php");
+
+	for($i = 0; $i < 1; $i++){
+
+	if(is_null($Team_a[$i])){
+		$Team_a[$i] = "winner";
+	}
+
+	if(is_null($Team_b[$i])){
+		$Team_b[$i] = "winner";
+	}
+
+	}
+
 	
 	$poule= $database->query("UPDATE `tbl_teams` SET `poule_id` = '1' WHERE `tbl_teams`.`name` = '".$Team[0]."'"); 
 	$poule2= $database->query("UPDATE `tbl_teams` SET `poule_id` = '2' WHERE `tbl_teams`.`name` = '".$Team[1]."'");
@@ -21,9 +31,21 @@
 </div>
 
 
+<?php 
+$teamscount = 2;
+require("../app/getlastwinner.php");
+?>
+
 <div id="winnar">
-	<h4>Winner</h4>
+	<?php
+	echo '<h4>'.$lastwinner.'</h4>';
+	?>
 </div>
+
+<?php
+        require("../app/totalscore.php");
+?>
+	<h1 class="footerpush"></h1>
 
 
 

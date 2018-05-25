@@ -6,23 +6,45 @@
 	<link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-	
+	<header>
+		<h2>FIFA-Generator</h2>
+		<h3>HomePage</h3>
+	</header>
 	<div class="intro">
-	<h1>Welcome to FIFA-Generator</h1>
-	<h2>Create and mangement your own tournaments</h2>
-	<h3>what are you waiting for!? start now</h3>
+	<h1 id="Title">Welcome to FIFA-Generator</h1>
+
+	<img class="homeimg" src="../img/home.jpg" alt="home">
+	<div class="description">
+	<h2 id="Title2">Create and mangement your own tournaments</h2>
+	<h3 id="Title2">what are you waiting for!? start now</h3>
 	<form action="" method="post">
-		<input type="text" placeholder="Username" name="user" id="user">
-		<input type="password" placeholder="Enter Your Password" name="password" id="password">
-		<input type="submit" value="login" name="sub" id="sub">
+		<input class="username" type="text" placeholder="Username" name="user" id="user">
+		<br>
+		<input class="password" type="password" placeholder="Enter Your Password" name="password" id="password">
+		<br>
+		<input class="loginbtn" type="submit" value="login" name="sub" id="sub">
 	</form>
+	</div>
 	<p></p>
-	<a href="">or check the old tournaments</a>
+	<a class="nonuser" href="tree.php">or check the old tournaments</a>
 	</div>
 
+<h1 class="footerpush2"></h1>
+	<div class="footer">
+        <h1>FIFA-Generator</h1>
+        <p>Radius group 6</p>
+        <div class="footer-names">
+            <P>This project was created by:</P>
+            <p id="Allaith">Allaith</p>
+            <p id="Bas">Bas</p>
+            <p id="Thijs">Thijs</p>
+            <p id="Thomas">Thomas</p>
+        </div>
+    </div>
 
-
+    
 </body>
+
 </html>
 
 
@@ -47,6 +69,7 @@ if(isset($_POST['sub'])){
 	}else{
 
 		if($user == 'admin' && $password == 'admin'){
+
 			$_SESSION['loggedin'] = true;
 			header("Location: adminpanel.php");
 

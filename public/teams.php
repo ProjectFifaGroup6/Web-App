@@ -7,20 +7,23 @@
 	<link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-	
+<header>
+		<h2>FIFA-Generator</h2>
+		<h3>Teams</h3>
+</header>	
 <form action="" method="post">
   <input type="text" name="teamname" id="teamname" placeholder="teamname">
   <input type="submit" name="addteam" id="addteam" value="Add">
 </form>
-<form method="post">
-	<input type="submit" name="done" id="done" value="done">
-</form>
+
 
 <?php
 
 require("../database/databaseConnector.php");
 
 if(isset($_POST['addteam'])){
+
+
 
 
 $teamname = $_POST['teamname'];
@@ -32,7 +35,7 @@ $database->query($sql);
 }
 
 
-echo '<table>';
+echo '<table id="teamsedit">';
 echo '<tr>';
 echo '<th>Teams:</th>';
 echo '<th>Delete team:</th>';
@@ -63,29 +66,11 @@ if(isset($_POST['done'])){
 }
 
 ?>
+<form method="post">
+	<input type="submit" name="done" id="done" value="done">
+</form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 </body>
 </html>
 

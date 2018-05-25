@@ -6,7 +6,10 @@
 	<link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-	
+<header>
+		<h2>FIFA-Generator</h2>
+		<h3>scores</h3>
+	</header>	
 <?php 
 require("../database/databaseConnector.php");
 
@@ -21,12 +24,11 @@ $findteam2->execute();
 $team2 = $findteam2->fetchColumn();
 
 
-
+echo '<div class="addscore">';
 echo '<h1>'.$team.'</h1>';
 echo '<h2>. VS .</h2>';
 echo '<h1>'.$team2.'</h1>';
 
-echo '<h4>Edit scores:</h4>';
 
 ?>
 
@@ -41,12 +43,23 @@ echo '<h4>Edit scores:</h4>';
 	?>
 	<input id="score2" type="number" name="score2" min="0">	
 
-	<h1></h1>
 
 
 	<h3></h3>
 	<input type="submit" name="submit" id="submit" value="SUBMIT">
 </form>
+</div>
+<div class="footer">
+        <h1>FIFA-Generator</h1>
+        <p>Radius group 6</p>
+        <div class="footer-names">
+            <P>This project was created by:</P>
+            <p id="Allaith">Allaith</p>
+            <p id="Bas">Bas</p>
+            <p id="Thijs">Thijs</p>
+            <p id="Thomas">Thomas</p>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -60,8 +73,11 @@ if(isset($_POST['submit'])){
 	
 
 	if($score1 > $score2){
+
 		$winner = $database->query("INSERT INTO `tbl_winners` (`team_id`) VALUES ('$id1')");
+
 	}else{
+		
 		$winner = $database->query("INSERT INTO `tbl_winners` (`team_id`) VALUES ('$id2')");
 	}
 

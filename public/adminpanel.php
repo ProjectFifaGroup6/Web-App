@@ -6,18 +6,34 @@
 	<link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-	<h1>Admin:</h1>
-	<ul>
+	<header>
+		<h2>FIFA-Generator</h2>
+		<h3>Admin</h3>
+	</header>
+	
+	<h1 id="Title" class="smalltitle">Control-Panel:</h1>
+	<div class="panel">	<ul>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="../app/results.php">Results</a></li>
-	<li><a href="tree.php">scores</a></li>
 	<li><a href="teams.php">Teams</a></li>
 	<li><a href="tree.php">MatchesTree</a></li>
-
 	</ul>
+	</div>
 	<form action="" method="post">
-	<input type="submit" value="logout" name="logout">
+	<input class="loginbtn"	type="submit" value="logout" name="logout">
 	</form>
+	<h1 class="footerpush"></h1>
+	<div class="footer">
+        <h1>FIFA-Generator</h1>
+        <p>Radius group 6</p>
+        <div class="footer-names">
+            <P>This project was created by:</P>
+            <p id="Allaith">Allaith</p>
+            <p id="Bas">Bas</p>
+            <p id="Thijs">Thijs</p>
+            <p id="Thomas">Thomas</p>
+        </div>
+    </div>
 </body>
 </html>
 

@@ -2,7 +2,9 @@
 
 require("../database/databaseConnector.php");
 
-
+$gettimelist = $database->query("SELECT * FROM `tbl_matches` WHERE `score_team_a` IS NULL and `score_team_b` IS NULL");
+$gettimelist->execute();
+$timelist = $gettimelist->fetchAll();
 
 
 
@@ -16,7 +18,7 @@ echo '<th>Team2:</th>';
 echo '<th>Tijd</th>';
 echo '</tr>';
 
-foreach ($items as $item) {
+foreach ($timelist as $item) {
 
 $findteam = $database->query("SELECT `name` From `tbl_teams` WHERE `id` = '".$item['team_id_a']."' "); 
 $findteam->execute();   
@@ -30,8 +32,11 @@ echo '<td>' . $team . '</td>';
 echo '<td>' . $team2 . '</td>';
 echo '<td>' . $item['start_time'] . '</td>';
 echo '</tr>';
+ 
 
+	
 }
 echo '</table>';
+
 
 ?>
